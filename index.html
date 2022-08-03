@@ -1,296 +1,550 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Gamma Distribution | Presentation</title>
-		<link rel="shortcut icon" href="./imgs/gamma.png" type="image/png">
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
-		<script src="https://cdn.tailwindcss.com"></script>
-		<link href="https://cdn.jsdelivr.net/npm/daisyui@2.20.0/dist/full.css" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-			html
-			{
-				font-family: 'Roboto', sans-serif !important ;
-			}
-			pre
-			{
-				padding:0  2px !important;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-background="#ffffff">
-					<a>
-						<img src="./gamma_function_cropped.jpg" alt="Gamma Func" style="height: 200px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
-					</a>
-					<h2>Gamma Distribution</h2>
-					<p>
-						<small>A debitage concept of statistics</small>
-					</p>
-				</section>
+
+<head>
+	<meta charset="utf-8">
+	<title>Gamma Distribution | Presentation</title>
+	<link rel="shortcut icon" href="./imgs/favicon-b.ico" type="image/png">
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://cdn.jsdelivr.net/npm/daisyui@2.20.0/dist/full.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+		integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+		html {
+			font-family: 'Roboto', sans-serif !important;
+		}
+
+		pre {
+			padding: 0 2px !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="#ffffff">
+				<a>
+					<img src="./gamma_function_cropped.jpg" alt="Gamma Func"
+						style="height: 200px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+				</a>
+				<h2>Gamma Distribution</h2>
+				<p>
+					<small>A debitage concept of statistics</small>
+				</p>
+			</section>
+			<section>
 				<section>
-					<section>
-						<div class="w-[70vw] ml-[-7vw] text-left">
-							<h3 >Gamma Distribution</h3>
-						<p  class="text-3xl">
-							A probability distribution is the mathematical function that gives the probabilities of occurrence of different possible outcomes for an experiment.
-							a two Parameter continuous distribution which follows gamma function is called gamma distribution
+					<div class="w-[70vw] ml-[-7vw] text-left">
+						<h3>Gamma Distribution</h3>
+						<p class="text-3xl">
+							A probability distribution is the mathematical function that gives the probabilities of
+							occurrence of different possible outcomes for an experiment.
+							a two Parameter continuous distribution which follows gamma function is called gamma
+							distribution
 						</p>
-						<ul class="text-3xl" >
-							<li> <pre class="px-2" style="width: 100% !important">  It’s a continuous distribution </pre></li>
-							<li> <pre class="px-2" style="width: 100% !important">  It’s 2 parameter distribution </pre></li>
+						<ul class="text-3xl">
+							<li>
+								<pre class="px-2" style="width: 100% !important">  It’s a continuous distribution </pre>
+							</li>
+							<li>
+								<pre class="px-2" style="width: 100% !important">  It’s 2 parameter distribution </pre>
+							</li>
 						</ul>
-						<p class="text-xl" >
-							It is used to predict the wait time until future events occur. As we shall see the parameterization below, Gamma Distribution predicts the wait time until the k-th (Shape parameter) event occurs. 
+						<p class="text-xl">
+							It is used to predict the wait time until future events occur. As we shall see the
+							parameterization below, Gamma Distribution predicts the wait time until the k-th (Shape
+							parameter) event occurs.
 							<br>
-							When a certain procedure consists of α independent steps, and each step takes Exponential (λ) amount of time, then the total time has Gamma distribution with parameters α and λ.
+							When a certain procedure consists of α independent steps, and each step takes Exponential
+							(λ) amount of time, then the total time has Gamma distribution with parameters α and λ.
 						</p>
 						<p class="text-xl">
 							Exmaple : <br>
-							Users visit a certain internet site at the average rate of 12 hits per minute. Every sixth visitor receives some promotion that comes in a form of a flashing banner. Then the time between consecutive promotions has Gamma distribution with parameters α = 6 and λ = 12.
+							Users visit a certain internet site at the average rate of 12 hits per minute. Every sixth
+							visitor receives some promotion that comes in a form of a flashing banner. Then the time
+							between consecutive promotions has Gamma distribution with parameters α = 6 and λ = 12.
 						</p>
-						</div>
-					</section>
-					<section>
-						<div class="w-[70vw] ml-[-7vw] text-left">
-							<h3 >Gamma related to Others</h3>
-						<p class="text-xl">
-							The gamma, exponential, and Poisson distributions all model different characteristics of a Poisson process. All these distributions can use lambda as a parameter, which represents that average rate of occurrence.
-						</p>
-						<p class="text-xl">
-							The gamma distribution models the time between events. Time is a continuous variable, and the gamma distribution is, likewise, a continuous probability distribution. Conversely, the Poisson distribution models the count of events within a set amount of time. A count is a discrete variable and the Poisson distribution is a discrete probability distribution. <br>
-						</p>
-						<p class="text-xl">
-							The gamma and exponential distributions are equivalent when the gamma distribution has a shape value of 1. Remember that the shape value equals the number of events and the exponential distribution models times for one event. Therefore, a gamma distribution with a shape = 1 is the same as an exponential distribution.<br>
-							For example, a gamma distribution with a shape = 1 and scale = 3 is equivalent to an exponential distribution with a scale = 3
-						</p>
-						<pre class="text-3xl text-center text-[#2a76dd]" style="width: fit-content !important;">Gamma (1, λ) == Exponential (λ)</pre>
-						</div>
-					</section>
-					<section >
-						<div class="w-[70vw] ml-[-7vw] text-left" style="display: flex !important;flex-direction: row;gap:30px;">
-							<div class="w-[40vw] text-left text-4xl">
-								<h2>Real Life Exmaples</h2>
-								<ul>
-									<li class="py-3">Corona Virus Patients</li>
-									<li class="py-3">Load on Server Computer</li>
-									<li class="py-3">Waiting Time in Reservation</li>
-									<li class="py-3">The amount of rainfall accumulated in a reservoir(Dam).</li>
-									<li class="py-3">Flow of items through manufacturing and distribution processes.</li>
-								</ul>
-							</div>
-							<div class="flex flex-col justify-center h-90">
-
-								<img src="./R.png" alt="Gamma Graph" style="width: 600px; height:300px;">
-							</div>
-						</div>
-					</section>
-				</section>
-				<section>
-					<div class  ="w-[70vw] ml-[-7vw] text-left">
-						<h3>Dependencies(Gamma Function)</h3>
-					<p  class ="text-xl">
-						To define the family of gamma distributions, we first need to introduce a function that plays an important role in many branches of mathematics like solving the hard integrals.
-					</p>
-					<p class ="text-xl">For α>0 , the gamma function is defined by</p>
-					<img src="./imgs/gamma_func.jpeg" alt="" style="height: 127px;">
-					<p class ="text-xl">Most important properties of gamma function is following:</p>
-					<ul>
-						<li> <pre style="width : 600px !important;"> For any α>0, Γ(t+1) = (t)Γ(t)</pre></li>
-						<li> <pre style="width : 600px !important;"> For any positive integer t, Γ(t) = (t-1)!</pre></li>
-						<li> <pre style="width : 600px !important;"> Γ(1/2) = √&#960;</pre></li>
-					</ul>
 					</div>
 				</section>
 				<section>
-					<section>
-						<div class="w-[70vw] ml-[-7vw] text-left" style="word-spacing: 3px;">
-							<h3>Probablity Desity Function(PDF)</h3>
-							<p class="text-xl">It is a two-parameter continuous probability distribution.The derivation of which from Gamma Function we will see. The commonly used parameterizations are as follows-</p>
-							<ul class="text-xl">
-								<li> <strong>Shape parameter = k</strong> and <strong>Scale parameter = θ</strong>.</li>
-								<li><strong>Shape parameter α = k</strong> and an <strong>Inverse Scale parameter β = 1/θ</strong> called a <strong class="text-info">Rate parameter</strong>. In exponential distribution, we call it as <strong>λ (lambda, λ = 1/θ)</strong> which is known as the Rate of the Events happening that follows the Poisson process. While k is the number of events until which we are waiting for the expected event to occur.</li>
-								<li>Shape parameter = k and a Mean parameter μ = k*θ = α/β.</li>
-							</ul>
-							<div id="derivation-of-PDF" class="popup absolute w-[calc(100%+10vw)] h-full flex items-center justify-center" style="top:0 !important;display:none;">
-								<img src="./imgs/PDF_derivation.jpeg" alt="" style="height: 100%;" class="shadow-2xl">
-								<div onclick="closed()" class="w-[65px] h-[65px] absolute right-60  top-1  rounded-xl shadow-xl text-white font-bold text-5xl btn btn-info"><i class="fa-solid fa-xmark"></i></div>
-							</div>
-							<div class="w-full justify-between items-center flex ">
-								<img src="./imgs/PDF_general.png" alt="">
-								<button class = "btn btn-info shadow-lg" onclick="document.getElementById('derivation-of-PDF').style.display = 'flex';">Derivation</button>
-							</div>
-							<p class="text-xl">Using the parameters as k (k>0) and θ (λ = 1/θ) where λ is the rate of the event, we can write the PDF of the Gamma Distribution as–</p>
-							<img src="./imgs/PDF_final.png" alt="">
-							<p class="text-xl">Therefore, a random variable X is eventually denoted b</p>
-							<img src="./imgs/PDF_refined.png" alt="">
-						</div>
-					</section>
-					<section>
-						<div class="w-[70vw] ml-[-7vw]">
-							<img src="./imgs/Graph-DBL.jpeg" style="width:100%; height: 50vh;"alt="">
-						</div>
-					</section>
-				</section>		
+					<div class="w-[70vw] ml-[-7vw] text-left">
+						<h3>Gamma related to Others</h3>
+						<p class="text-xl">
+							The gamma, exponential, and Poisson distributions all model different characteristics of a
+							Poisson process. All these distributions can use lambda as a parameter, which represents
+							that average rate of occurrence.
+						</p>
+						<p class="text-xl">
+							The gamma distribution models the time between events. Time is a continuous variable, and
+							the gamma distribution is, likewise, a continuous probability distribution. Conversely, the
+							Poisson distribution models the count of events within a set amount of time. A count is a
+							discrete variable and the Poisson distribution is a discrete probability distribution. <br>
+						</p>
+						<p class="text-xl">
+							The gamma and exponential distributions are equivalent when the gamma distribution has a
+							shape value of 1. Remember that the shape value equals the number of events and the
+							exponential distribution models times for one event. Therefore, a gamma distribution with a
+							shape = 1 is the same as an exponential distribution.<br>
+							For example, a gamma distribution with a shape = 1 and scale = 3 is equivalent to an
+							exponential distribution with a scale = 3
+						</p>
+						<pre class="text-3xl text-center text-[#2a76dd]"
+							style="width: fit-content !important;">Gamma (1, λ) == Exponential (λ)</pre>
+					</div>
+				</section>
 				<section>
-					<section>
-						<div class="w-[70vw] ml-[-7vw] text-left" style="word-spacing: 3px;">
-							<div class="w-full justify-between items-center flex ">
-								<h3>Constants</h3>
-								<button class = "btn btn-info shadow-lg" onclick="document.getElementById('derivation-of-constant').style.display = 'flex';">Explain</button>
-							</div>
-							<div id="derivation-of-constant" class="popup absolute w-[calc(100%+10vw)] h-full flex items-center justify-center" style="top:0 !important;display:none;">
-								<img src="./imgs/Expectation.jpeg" alt="" style="height: 100%;" class="shadow-2xl">
-								<div onclick="closed()" class="w-[65px] h-[65px] absolute right-10  top-2  rounded-xl shadow-xl text-white font-bold text-5xl btn btn-info"><i class="fa-solid fa-xmark"></i></div>
-							</div>
-							<h4>Mean</h4>
-							<div class="w-full justify-between items-center flex ">
-								<img src="./imgs/mean_general.jpeg" alt="">
-							</div>
-							<h4>Varience</h4>
-							<div class="w-full justify-between items-center flex ">
-								<img src="./imgs/Varience_1.jpeg" alt="">
-							</div>
-							<div class="w-full justify-between items-center flex ">
-								<img src="./imgs/Vareince_2.jpeg" alt="">
-							</div>
+					<div class="w-[70vw] ml-[-7vw] text-left"
+						style="display: flex !important;flex-direction: row;gap:30px;">
+						<div class="w-[40vw] text-left text-4xl">
+							<h2>Real Life Exmaples</h2>
+							<ul>
+								<li class="py-3">Corona Virus Patients</li>
+								<li class="py-3">Load on Server Computer</li>
+								<li class="py-3">Waiting Time in Reservation</li>
+								<li class="py-3">The amount of rainfall accumulated in a reservoir(Dam).</li>
+								<li class="py-3">Flow of items through manufacturing and distribution processes.</li>
+							</ul>
 						</div>
-					</section>
-					<section>
-						<div class="w-[70vw] ml-[-7vw] text-left" style="word-spacing: 3px;">
-							<h4>CDF</h4>
+						<div class="flex flex-col justify-center h-90">
+
+							<img src="./R.png" alt="Gamma Graph" style="width: 600px; height:300px;">
+						</div>
+					</div>
+				</section>
+			</section>
+			<section>
+				<div class="w-[70vw] ml-[-7vw] text-left">
+					<h3>Dependencies(Gamma Function)</h3>
+					<p class="text-xl">
+						To define the family of gamma distributions, we first need to introduce a function that plays an
+						important role in many branches of mathematics like solving the hard integrals.
+					</p>
+					<p class="text-xl">For α>0 , the gamma function is defined by</p>
+					<div class="flex justify-between items-center">
+						<img src="./imgs/gamma_func.jpeg" alt="" style="height: 127px;">
+						<button class="btn btn-info"
+							onclick="document.getElementById('full-form-of-gamma').style.display = 'flex';">WRT 2
+							variables</button>
+					</div>
+					<div id="full-form-of-gamma"
+						class="popup absolute w-[calc(100%+10vw)] h-full flex items-center justify-center"
+						style="z-index:9999;top:0 !important;display:none;">
+						<img src="./imgs/gamma_2nd_nontransparent.jpeg" alt="" style="height: 100%;" class="shadow-2xl">
+						<button onclick="document.getElementById('full-form-of-gamma-example').style.display = 'flex';"
+							class="btn btn-info absolute left-5  top-1 font-bold text-white">Example</button>
+						<div onclick="closed()"
+							class="w-[65px] h-[65px] absolute right-5  top-1  rounded-xl shadow-xl text-white font-bold text-5xl btn btn-info">
+							<i class="fa-solid fa-xmark"></i></div>
+					</div>
+					<div id="full-form-of-gamma-example"
+						class="popup absolute w-[calc(100%+10vw)] h-full flex items-center justify-center"
+						style="z-index:9999;top:0 !important;display:none;">
+						<img src="./imgs/example_of_2nd_formula.jpeg" alt="" style="height: 100%;" class="shadow-2xl">
+						<div onclick="closed()"
+							class="w-[65px] h-[65px] absolute right-5  top-1  rounded-xl shadow-xl text-white font-bold text-5xl btn btn-info">
+							<i class="fa-solid fa-xmark"></i></div>
+					</div>
+					<div id="full-form-of-pi-example"
+						class="popup absolute w-[calc(100%+10vw)] h-full flex items-center justify-center"
+						style="z-index:9999;top:0 !important;display:none;">
+						<img src="./imgs/example_of_pi_formula.jpeg" alt="" style="height: 100%;" class="shadow-2xl">
+						<div onclick="closed()"
+							class="w-[65px] h-[65px] absolute right-5  top-1  rounded-xl shadow-xl text-white font-bold text-5xl btn btn-info">
+							<i class="fa-solid fa-xmark"></i></div>
+					</div>
+					<p class="text-xl">Most important properties of gamma function is following:</p>
+					<ul>
+						<li>
+							<pre style="width : 600px !important;"> For any positive integer t, Γ(t) = (t-1)!</pre>
+						</li>
+						<li>
+							<pre style="width : 600px !important;"> For any α>0, Γ(t+1) = (t)Γ(t)</pre>
+						</li>
+						<li>
+							<pre onclick="document.getElementById('full-form-of-pi-example').style.display = 'flex';"
+								style="width : 600px !important;cursor: pointer"> Γ(1/2) = √&#960;</pre>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<section>
+					<div class="w-[70vw] ml-[-7vw] text-left" style="word-spacing: 3px;">
+						<h3>Probablity Desity Function(PDF)</h3>
+						<p class="text-xl">It is a two-parameter continuous probability distribution.The derivation of
+							which from Gamma Function we will see. The commonly used parameterizations are as follows-
+						</p>
+						<ul class="text-xl">
+							<li> <strong>Shape parameter = k</strong> and <strong>Scale parameter = θ</strong>.</li>
+							<li><strong>Shape parameter α = k</strong> and an <strong>Inverse Scale parameter β =
+									1/θ</strong> called a <strong class="text-info">Rate parameter</strong>. In
+								exponential distribution, we call it as <strong>λ (lambda, λ = 1/θ)</strong> which is
+								known as the Rate of the Events happening that follows the Poisson process. While k is
+								the number of events until which we are waiting for the expected event to occur.</li>
+							<li>Shape parameter = k and a Mean parameter μ = k*θ = α/β.</li>
+						</ul>
+						<div id="derivation-of-PDF"
+							class="popup absolute w-[calc(100%+10vw)] h-full flex items-center justify-center"
+							style="top:0 !important;display:none;">
+							<img src="./imgs/PDF_derivation.jpeg" alt="" style="height: 100%;" class="shadow-2xl">
+							<div onclick="closed()"
+								class="w-[65px] h-[65px] absolute right-60  top-1  rounded-xl shadow-xl text-white font-bold text-5xl btn btn-info">
+								<i class="fa-solid fa-xmark"></i></div>
+						</div>
+						<div class="w-full justify-between items-center flex ">
+							<img src="./imgs/PDF_general.png" alt="">
+							<button class="btn btn-info shadow-lg"
+								onclick="document.getElementById('derivation-of-PDF').style.display = 'flex';">Derivation</button>
+						</div>
+						<p class="text-xl">Using the parameters as k (k>0) and θ (λ = 1/θ) where λ is the rate of the
+							event, we can write the PDF of the Gamma Distribution as–</p>
+						<img src="./imgs/PDF_final.png" alt="">
+						<p class="text-xl">Therefore, a random variable X is eventually denoted b</p>
+						<img src="./imgs/PDF_refined.png" alt="">
+					</div>
+				</section>
+				<section>
+					<div class="w-[70vw] ml-[-7vw]">
+						<img src="./imgs/Graph-DBL.jpeg" style="width:100%; height: 50vh;" alt="">
+					</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<div class="w-[70vw] ml-[-7vw] text-left" style="word-spacing: 3px;">
+						<div class="w-full justify-between items-center flex ">
+							<h3>Constants</h3>
+							<button class="btn btn-info shadow-lg"
+								onclick="document.getElementById('derivation-of-constant').style.display = 'flex';">Explain</button>
+						</div>
+						<div id="detailed-derivation-of-constant"
+							class="popup absolute w-[calc(100%+10vw)] h-full flex items-center justify-center"
+							style="top:0 !important;display:none;z-index:9999;">
+							<img src="./imgs/detailed_expectation.jpeg" alt="" style="height: 100vh;" class="shadow-2xl">
+							<div onclick="closed()"
+								class="w-[65px] h-[65px] absolute right-20  top-2  rounded-xl shadow-xl text-white font-bold text-5xl btn btn-info">
+								<i class="fa-solid fa-xmark"></i></div>
+						</div>
+						<div id="derivation-of-constant"
+							class="popup absolute w-[calc(100%+10vw)] h-full flex items-center justify-center"
+							style="top:0 !important;display:none;">
+							<img src="./imgs/Expectation.jpeg" alt="" style="height: 100%;" class="shadow-2xl">
+							<div onclick="document.getElementById('detailed-derivation-of-constant').style.display = 'flex';"
+								class="absolute left-20  top-2  text-white btn btn-info">
+								More Details</div>
+							<div onclick="closed()"
+								class="w-[65px] h-[65px] absolute right-20  top-2  rounded-xl shadow-xl text-white font-bold text-5xl btn btn-info">
+								<i class="fa-solid fa-xmark"></i></div>
+						</div>
+						<h4>Mean</h4>
+						<div class="w-full justify-between items-center flex ">
+							<img src="./imgs/mean_general.jpeg" alt="">
+						</div>
+						<h4>Varience</h4>
+						<div class="w-full justify-between items-center flex ">
+							<img src="./imgs/Varience_1.jpeg" alt="">
+						</div>
+						<div class="w-full justify-between items-center flex ">
+							<img src="./imgs/Vareince_2.jpeg" alt="">
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="w-[70vw] ml-[-7vw] text-left" style="word-spacing: 3px;">
+						<h4>CDF</h4>
 						<div class="w-full justify-between items-center flex ">
 							<img src="./imgs/CDF.jpeg" style="width:500px;" alt="">
 						</div>
 						<h4>MGF</h4>
 						<div class="w-full justify-between items-center flex ">
 							<img src="./imgs/MGF_standard.jpeg" style="width:400px;" alt="">
-							<button class = "btn btn-info shadow-lg" onclick="document.getElementById('derivation-of-MGF').style.display = 'flex';">Derivation</button>
+							<button class="btn btn-info shadow-lg"
+								onclick="document.getElementById('derivation-of-MGF').style.display = 'flex';">Derivation</button>
 						</div>
 						<img src="./imgs/MGF_double.jpeg" style="width:400px;" alt="">
-						<div id="derivation-of-MGF" class="popup absolute w-[calc(100%+10vw)] h-full flex items-center justify-center" style="top:0 !important;display:none;">
+						<div id="derivation-of-MGF"
+							class="popup absolute w-[calc(100%+10vw)] h-full flex items-center justify-center"
+							style="top:0 !important;display:none;">
 							<img src="./imgs/MGF_derivation.jpeg" alt="" style="height: 100%;" class="shadow-2xl">
-							<div onclick="closed()" class="w-[65px] h-[65px] absolute right-10  top-2  rounded-xl shadow-xl text-white font-bold text-5xl btn btn-info"><i class="fa-solid fa-xmark"></i></div>
+							<div onclick="closed()"
+								class="w-[65px] h-[65px] absolute right-10  top-2  rounded-xl shadow-xl text-white font-bold text-5xl btn btn-info">
+								<i class="fa-solid fa-xmark"></i></div>
 						</div>
-						</div>
-					</section>
+					</div>
 				</section>
+			</section>
 
+			<section>
+				<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly"
+					style="word-spacing: 3px;">
+					<div>
+						<h5>Question 1:</h5>
+						<p class="mb-8 text-2xl">Imagine you are solving difficult Maths theorems and you expect to
+							solve one every 1/2 hour. Compute the probability that you will have to wait between 2 to 4
+							hours before you solve four of them.</p>
+					</div>
+					<div>
+						<p class="text-xl">One theorem every 1/2 hour means we would suppose to get θ = 1 / 0.5 = 2
+							theorem every hour on average. Using θ = 2 and k = 4, Now we can calculate it as follows</p>
+					</div>
+					<img src="./imgs/Q1-1.jpeg" style="width: fit-content;" alt="">
+					<button class="shadow-lg btn btn-info calculate-btn" id="1"
+						oncLick="calculate(this)">Calculate</button>
+					<div style="display:none;" id="answer-1"
+						class=" bg-success rounded-xl flex justify-center items-center h-[100px] py-2 px-4">Answer is
+						<span class="text-primary font-bold px-4">0.12388</span></div>
+				</div>
+			</section>
+			<section>
 				<section>
-					<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly" style="word-spacing: 3px;">
-						<div>
-							<h5>Question 1:</h5>
-							<p class="mb-8 text-2xl">Imagine you are solving difficult Maths theorems and you expect to solve one every 1/2 hour. Compute the probability that you will have to wait between 2 to 4 hours before you solve four of them.</p>
+					<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly"
+						style="word-spacing: 3px;">
+						<h5 class="">Question 2:</h5>
+						<div class=" mb-8 text-3xl font-bold">
+							<p>
+								Compilation of a computer program consists
+								of 3 blocks that are processed sequentially, one after another. Each block takes
+								Exponential
+								time with the mean of 5 minutes, independently of other blocks.
+							</p>
+							<ul>
+								<li>(a) Compute the expectation and variance of the total compilation time.</li>
+								<li>(b) Compute the probability for the entire program to be compiled in less than 12
+									minutes.</li>
+							</ul>
 						</div>
-						<div>
-							<p class="text-xl">One theorem every 1/2 hour means we would suppose to get θ = 1 / 0.5 = 2 theorem every hour on average. Using θ = 2 and k = 4, Now we can calculate it as follows</p>
-						</div>
-						<img src="./imgs/Q1-1.jpeg" style="width: fit-content;" alt="">
-						<button class="shadow-lg btn btn-info calculate-btn" id="1" oncLick="calculate(this)" >Calculate</button>
-						<div style="display:none;" id="answer-1" class=" bg-success rounded-xl flex justify-center items-center h-[100px] py-2 px-4">Answer is <span class="text-primary font-bold px-4">0.12388</span></div>
+						<a href="/#/6/1" style="color:black;"
+							class=" btn btn-info shadow-xl flex gap-5"><span>Solution</span><i
+								class="fa-solid fa-angle-down"></i></a>
 					</div>
 				</section>
 				<section>
-					<section>
-						<div  class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly" style="word-spacing: 3px;">
-							<h5 class="">Question 2:</h5>
-							<div class=" mb-8 text-3xl font-bold">
+					<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly"
+						style="word-spacing: 3px;">
+						<div class="text-xl" id="solution-S2">
+							<a href="/#/6" style="color:black;"
+								class="btn btn-info shadow-xl w-full flex gap-5"><span>Question</span><i
+									class="fa-solid fa-angle-up"></i></a>
+							<p>
+								<strong class="text-2xl">Solution: </strong>The total time T is a sum of three
+								independent Exponential times, therefore,
+								it has Gamma distribution with α = 3. The frequency parameter λ equals (1/5) min−1
+								because the Exponential compilation time of each block has expectation 1/λ = 5 min.
+							</p>
+							<div class="flex justify-between">
 								<p>
-									Compilation of a computer program consists
-									of 3 blocks that are processed sequentially, one after another. Each block takes Exponential
-									time with the mean of 5 minutes, independently of other blocks.
-								</p>
-								<ul >
-									<li>(a) Compute the expectation and variance of the total compilation time.</li>
-									<li>(b) Compute the probability for the entire program to be compiled in less than 12 minutes.</li>
-								</ul>
-							</div>
-							<a href="/#/6/1" style="color:black;" class=" btn btn-info shadow-xl flex gap-5"><span>Solution</span><i class="fa-solid fa-angle-down"></i></a>
-						</div>
-					</section>
-					<section>
-						<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly" style="word-spacing: 3px;">
-							<div class="text-xl" id="solution-S2">
-								<a href="/#/6" style="color:black;"class="btn btn-info shadow-xl w-full flex gap-5"><span>Question</span><i class="fa-solid fa-angle-up"></i></a>
-								<p>
-								<strong class="text-2xl">Solution: </strong>The total time T is a sum of three independent Exponential times, therefore,
-									it has Gamma distribution with α = 3. The frequency parameter λ equals (1/5) min−1
-									because the Exponential compilation time of each block has expectation 1/λ = 5 min.
-								</p>
-								<div class="flex justify-between">
-									<p >
 									(a) For a Gamma random variable T with α = 3 and λ = 1/5
 								</p>
-									<img src="./imgs/Q2-1.jpeg" alt="">
-								</div>
-								<p >
-									(b) A direct solution involves two rounds of integration by parts,
-								</p>
-								<div class="flex justify-around items-end">
-									<img src="./imgs/Q2-2.jpeg" alt="">
-									<img src="./imgs/Q2-3.jpeg" alt="" style="height:50px;">
-								</div>
-								<button class="shadow-lg btn btn-info calculate-btn w-full" id="2" oncLick="calculate(this)" >Calculate</button>
-								<div style="display:none;" id="answer-2" class="text-4xl bg-success rounded-xl flex justify-center items-center h-[100px] py-2 px-4">Answer is <span class="text-primary font-bold px-4"> 0.4303</span></div>
+								<img src="./imgs/Q2-1.jpeg" alt="">
+							</div>
+							<p>
+								(b) A direct solution involves two rounds of integration by parts,
+							</p>
+							<div class="flex justify-around items-end">
+								<img src="./imgs/Q2-2.jpeg" alt="">
+								<img src="./imgs/Q2-3.jpeg" alt="" style="height:50px;">
+							</div>
+							<button class="shadow-lg btn btn-info calculate-btn w-full" id="2"
+								oncLick="calculate(this)">Calculate</button>
+							<div style="display:none;" id="answer-2"
+								class="text-4xl bg-success rounded-xl flex justify-center items-center h-[100px] py-2 px-4">
+								Answer is <span class="text-primary font-bold px-4"> 0.4303</span></div>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section>
+				<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly"
+					style="word-spacing: 3px;">
+					<div>
+						<h5>Question 3:</h5>
+						<p class="mb-8 font-bold text-3xl">Let X have gamma distribution with λ =1/2 and w=1/2.Find the
+							probabilty density function(PDF) of Y=√X.</p>
+					</div>
+					<hr>
+					<div>
+						<img src="./imgs/Q3-1.png" alt="">
+						<p class="mb-8 text-xl">Differentiate with respect to y to get the pdf of <strong>Y</strong></p>
+						<img src="./imgs/Q3-2.png" alt="">
+						<p class="mb-8 text-xl">This is for y>=0. The rang is (0,∞)</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<section>
+					<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly"
+						style="word-spacing: 3px;">
+						<h5 class="">Question 4:</h5>
+						<div class=" mb-8 text-2xl font-bold">
+							<p>Let Xj be a sequence of independent, identically distributed random variables. Their
+								common density is </p>
+							<img src="./imgs/Q4-1.jpeg" class="h-[60px]" alt="">
+							<p>(It is zero for x<0.) Let</p>
+									<img src="./imgs/Q4-2.jpeg" class="h-[80px]" alt="">
+									<ul>
+										<li>(a) Find the mean and varience of <span class="overline">Xn</span>.</li>
+										<li>(b) For n = 1000, the probability that <span
+												class="overline">X</span><sub>1000</sub> is in [1,1.1] is approximately
+											given by</li>
+									</ul>
+									<div class="flex items-center justify-around">
+										<p>find a and b</p>
+										<img src="./imgs/Q4-5.jpeg" alt="">
+									</div>
+						</div>
+						<a href="/#/8/1" style="color:black;"
+							class=" btn btn-info shadow-xl flex gap-5"><span>Solution</span><i
+								class="fa-solid fa-angle-down"></i></a>
+					</div>
+				</section>
+				<section>
+					<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly"
+						style="word-spacing: 3px;">
+						<a href="/#/8" style="color:black;"
+							class="btn btn-info shadow-xl w-full flex gap-5"><span>Question</span><i
+								class="fa-solid fa-angle-up"></i></a>
+						<strong class="text-2xl">(a) Solution: </strong>
+						<ul class="text-xl">
+							<li>The Xj have a gamma distribution with w=2 and λ=2. So E[Xj]=1 and var(Xj)=1/2. So the
+								mean of <span class="overline">Xn</span> is 1 and its varience is 1/2n.</li>
+						</ul>
+						<strong class="text-2xl">(b) Solution: </strong>
+						<img src="./imgs/Q4-3.jpeg" class="h-[120px] w-fit" alt="">
+						<img src="./imgs/Q4-4.jpeg" class="h-[70px] w-fit" alt="">
+					</div>
+				</section>
+			</section>
+			<section>
+				<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-center"
+					style="word-spacing: 3px;">
+					<h5 class="">Question 5:</h5>
+					<div class=" mb-8 text-xl font-bold">
+						<p>Calculate the Survival Time X in weeks of a randomly selected male mouse exposed to 240 rads
+							of gamma radiation has a gamma distribution with α=8 and β=15.</p>
+						<p>also calculate probability that a mouse survives between 60 and 120 weeks is</p>
+					</div>
+					<strong class="text-3xl">Solution:</strong>
+					<img src="./imgs/Q5-1.jpeg" alt="" class="w-[600px]">
+				</div>
+			</section>
+			
+			<section>
+				<section>
+					<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-center"
+						style="word-spacing: 3px;">
+						<h5 class="">Question 6:</h5>
+						<div class=" mb-8 text-xl font-bold">
+							<p>Let λ>0 and let X<sub>1</sub>,X<sub>2</sub>,...,X<sub>n</sub> be a random sample from
+								the distribution with the probability density function</p>
+							<img src="./imgs/Q6-1.jpeg" alt="">
+							<div class="flex items-center">
+								<p>What is probability distribution of </p>
+								<img src="./imgs/Q6-2.jpeg" alt="">
 							</div>
 						</div>
-					</section>
-					
+						<a href="/#/10/1" style="color:black;"
+							class=" btn btn-info shadow-xl flex gap-5"><span>Solution</span><i
+								class="fa-solid fa-angle-down"></i></a>
+					</div>
 				</section>
-				<section style="text-align: left;">
+				<section>
+					<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly"
+						style="word-spacing: 3px;">
+						<a href="/#/10" style="color:black;"
+							class="btn btn-info shadow-xl w-full flex gap-5"><span>Question</span><i
+								class="fa-solid fa-angle-up"></i></a>
+								<strong class="text-3xl">Solution:</strong>
+								<img src="./imgs/Q6-3.jpeg" alt="">
+					</div>
+				</section>
+			</section>
+
+			<section>
+				<div class="w-[70vw] ml-[-7vw] text-left h-[80vh] flex flex-col justify-evenly"
+					style="word-spacing: 3px;">
+					<div>
+						<h5>Proof 1:</h5>
+						<p class="mb-8 font-bold text-3xl">Using the Properties of the gamma function show that gamma
+							PDF integrates to 1 <br>,i.e.,show that for α , λ > 0.</p>
+						<img src="./imgs/P1-1.png" alt="">
+					</div>
+					<hr>
+					<div>
+						<div class="flex items-end justify-around">
+							<img src="./imgs/P1-2.png" alt="">
+							<div class="flex flex-col items-end justify-between">
+								<button class="btn btn-info"
+									onclick="document.getElementById('reference-Of-P1').style.display = 'block';this.disabled = true">Reference</button>
+								<img id="reference-Of-P1" src="./imgs/gamma_2nd.png" alt="" class="hidden h-[150px]">
+							</div>
+						</div>
+						<div class="flex justify-between items-start">
+							<img src="./imgs/P1-3.png" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section style="text-align: left;">
+				<div class="flex justify-between items-center">
 					<h1>THE END</h1>
-				</section>
-			</div>
+					<div class="flex flex-col gap-3">
+						<button class="btn btn-info">Download</button>
+						<button class="btn btn-info">Share</button>
+						<button class="btn btn-info">Improve Code</button>
+					</div>
+				</div>
+			</section>
 		</div>
-		<script>
-				function calculate(e)
-				{
-					e.style.display = "none";
-					const id = e.getAttribute("id");
-					const answer = document.querySelector(`#answer-${id}`);
-					answer.style.display = "flex";
-				}
-				function closed()
-				{
-					const popups= document.querySelectorAll('.popup');
-					popups.forEach((c)=>
-					{
-						c.style.display = "none";
-					})
-				}
-		</script>
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/zoom/zoom.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/search/search.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
+	</div>
+	<script>
+		function calculate(e) {
+			e.style.display = "none";
+			const id = e.getAttribute("id");
+			const answer = document.querySelector(`#answer-${id}`);
+			answer.style.display = "flex";
+		}
+		function closed() {
+			const popups = document.querySelectorAll('.popup');
+			popups.forEach((c) => {
+				c.style.display = "none";
+			})
+		}
+	</script>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
 
-			// Also available as an ES module, see:
-			// https://revealjs.com/initialization/
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				center: true,
-				hash: true,
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-			});
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+		});
 
-		</script>
+	</script>
 
-	</body>
+</body>
+
 </html>
